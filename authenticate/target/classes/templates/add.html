@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8" />
+    <title>Add</title>
+</head>
+<body>
+    <h1 style="color: green">Add</h1>
+    <br/>
+    <div th:fragment="logout" class="logout" sec:authorize="isAuthenticated()">
+        Logged in user: <span sec:authentication="name"></span> |
+        Roles: <span sec:authentication="principal.authorities"></span>
+        <div>
+            <form id="logout" action="#" th:action="@{/logout}" method="post">
+                <a href="javascript:{}" onclick="document.getElementById('logout').submit(); return false;">Logout</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8" />
+    <title>Home</title>
+</head>
+<body>
+    <h1 style="color: green">Hello! This is Home Page!</h1>
+    <a style="color:blue" th:href="@{/admin/add}">Go to Admin Page!</a> <br />
+    <a style="color:blue" th:href="@{/user/draft}">Go to User Page!</a>
+</body>
+</html>
